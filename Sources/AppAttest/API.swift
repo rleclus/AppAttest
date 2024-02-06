@@ -201,6 +201,10 @@ extension AppAttest {
         )
         return AssertionResult(counter: Int(assertion.authenticatorData.counter))
     }
+
+    public static func makeAssertion(for counter: Int) -> AssertionResult {
+        return AssertionResult(counter: counter)
+    }
     // TODO: Add a reminder to use a different challenge
     // for attestation and assertion (and to never reuse a challenge).
 }
